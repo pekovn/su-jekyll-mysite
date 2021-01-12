@@ -1,3 +1,12 @@
-body {
-    background: lightblue;
-}
+@import url('variables.css');
+
+@import url('typograpgy.css');
+
+@import url('layout.css');
+
+@import url('navigation.css');
+
+@import url('site-header.css');
+
+@import url('site-footer.css');
+
