@@ -4,39 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ site.baseurl }}/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
     <title>{{site.title}}</title>
 </head>
 
-<body>
+<body class="
+{% if page.title %}page page-{{page.title | slugify }}{% endif %}
+{% if post.title %}post{% endif %}
+{% if page.home %}home{% endif %}
+">
+
     <div class="site">
         <header class="site-header">
             {% if page.home == true %}
             <h1 class="site-title">
-                <a href="{{ site.baseurl }}">{{site.title}}</a>
+                <a href="{{ site.baseurl }}/">{{site.title}}</a>
             </h1>
             {% else %}
             <p class="site-title">
-                <a href="{{ site.baseurl }}">{{site.title}}</a>
+                <a href="{{ site.baseurl }}/">{{site.title}}</a>
             </p>
             {% endif %}
 
-           {% include navigation.html %}
+            {% include navigation.html location="header" %}
         </header>
         <main class="site-main">
+
             {{content}}
-
-
-
 
         </main>
 
-        <aside class="site-sidebar">
+        {% include sidebar.html %}
 
-        </aside>
+
 
         <footer class="site-footer">
             <p>All rigths reserved &copy; {{site.title}}</p>
+            {% include navigation.html location="footer" %}
+
         </footer>
 
 
