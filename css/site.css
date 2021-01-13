@@ -4,10 +4,9 @@
 
 @import url('layout.css');
 
-@import url('navigation.css');
-
 @import url('site-header.css');
-
 @import url('site-footer.css');
 
-@import url("animations.css")
+@import url('navigation.css');
+
+@import url("animations.css");

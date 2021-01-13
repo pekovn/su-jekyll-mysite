@@ -3,7 +3,6 @@
     margin-bottom: var(--spacing-layout-elements);
     padding-bottom: calc( var(--spacing-layout-elements) / 2);
     align-items: center;
-
 }
 
 .site-title {
